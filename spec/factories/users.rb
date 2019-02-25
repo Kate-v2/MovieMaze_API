@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :user do
-    username { "MyString" }
-    password { "" }
-    token { "MyString" }
-    email { "MyString" }
+    sequence(:username) { |n| "Username#{n}" }
+    password            { "password" }
+    sequence(:token)    { |n| "123#{n}" }
+    sequence(:email)    { |n| "email#{n}" }
   end
 end
