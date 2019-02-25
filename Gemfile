@@ -24,6 +24,8 @@ gem 'figaro'
 gem 'factory_bot_rails'
 gem 'faker'
 
+gem 'travis'
+
 # gem 'mini_racer', platforms: :ruby   # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'redis',       '~> 4.0'          # Use Redis adapter to run Action Cable in production
 # gem 'mini_magick', '~> 4.8'          # Use ActiveStorage variant
