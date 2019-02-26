@@ -12,8 +12,6 @@ class User < ApplicationRecord
         username: data[:username]
       }
       user = User.new(base)
-      # Should I handle this in the controller instead?
-      return if     User.find_by_username(base[:username])
       return unless user.send(:confirm_password, data[:password_confirmation])
       user.send(:generate_api_key)
       return unless user.save!
@@ -29,6 +27,8 @@ class User < ApplicationRecord
     password == conf_pw
   end
 
+
+  # TO DO - Store token encrypted
 
   def generate_api_key
     api_key = self.token = SecureRandom.base64
