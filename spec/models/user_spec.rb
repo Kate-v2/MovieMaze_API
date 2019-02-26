@@ -25,10 +25,6 @@ RSpec.describe User, type: :model do
       expect(User.count).to eq(1)
     end
 
-    it 'Will fail to create if username is not unique' do
-      skip("Move this method to session Controller")
-    end
-
     it 'Will fail to create if password confimation fails' do
       info = data.dup
       info.delete(:password_confirmation)
