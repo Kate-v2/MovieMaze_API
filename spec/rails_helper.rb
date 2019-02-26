@@ -31,6 +31,8 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
+require 'pry'
+
 require 'simplecov'
 SimpleCov.start "rails" do
   add_filter'/bin/'
