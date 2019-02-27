@@ -48,7 +48,63 @@ This app obtains data through:
 ## How to Use
 1. Use [MovieMaze API](https://movie-maze.herokuapp.com/)
 
-* GET https://movie-maze.herokuapp.com/api/v1/search
+* **New User:** POST https://movie-maze.herokuapp.com/users
+```
+Headers:
+  Content-type: application/json
+  Accept: application/json
+Body:
+{
+	"username": "name",
+	"password": "pw",
+	"password_confirmation": "pw",
+	"email": "email"
+}
+```
+```
+Response
+status: 201
+Body:
+{
+    "data": {
+        "id": "100",
+        "type": "new_user",
+        "attributes": {
+            "id": 100,
+            "token": "xyz123"
+        }
+    }
+}
+```
+
+* **Login User:** POST https://movie-maze.herokuapp.com/sessions
+```
+Headers:
+  Content-type: application/json
+  Accept: application/json
+Body:
+{
+	"username": "name",
+	"password": "pw"
+}
+```
+```
+Response
+status: 200
+Body:
+{
+    "data": {
+        "id": "100",
+        "type": "login",
+        "attributes": {
+            "id": 100,
+            "token": "xyz123"
+        }
+    }
+}
+```
+
+* **Search Movie Titles** GET https://movie-maze.herokuapp.com/api/v1/search
 ```
 Headers:
   Content-type: application/json
