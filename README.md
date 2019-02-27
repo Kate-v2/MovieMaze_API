@@ -21,7 +21,7 @@ Things you may want to cover:
 
 #### Check it in action!
 * [APP]()
-* [API]()
+* [MovieMaze API](https://movie-maze.herokuapp.com/)
 
 ## Setup
 1. Fork or clone this repo: `git clone git@github.com:Kate-v2/MovieMaze.git <name of your choice>`
@@ -31,10 +31,11 @@ Things you may want to cover:
 1. Get and API token from [Utelly](https://rapidapi.com/utelly/api/utelly?endpoint=59ef20efe4b09ee1ff544377)
 
 1. Add each token to `application.yml` under both `test:` & `development:`
-  1. `uttely_key= YOUR TOKEN HERE`
-  1. `omdb_key= YOUR TOKEN HERE`
+1. `uttely_key: YOUR TOKEN HERE`
+1. `omdb_key: YOUR TOKEN HERE`
 1. Make sure you add these ENV variables to your deployment service.
 1. To see the app in action locally: `rails s` then go to: `http://localhost:3000/`
+1. Setup database `bundle exec rake db:{create,migrate}`
 
 
 ## APIs, Data, Services
@@ -45,7 +46,7 @@ This app obtains data through:
 
 
 ## How to Use
-1. Go to [MovieMaze]()
+1. Use [MovieMaze API](https://movie-maze.herokuapp.com/)
 
 * GET https://movie-maze.herokuapp.com/api/v1/search
 ```
@@ -111,13 +112,11 @@ Body:
 
 
 ## Running Tests
-To run tests use `npm test`
-
-## Screenshots
-
+* To run tests use `bundle exec rspec`
+* To open coverage (via simplecov gem) `open coverage/index.html` after you run the tests
 
 ## Future Goals
-* Incorporate user suggestions
+* Incorporate suggestions for user
 * Incorporate suggestions on each movie page - [TasteDive API](https://tastedive.com/read/api)
 * Add a watched button
 * Data Visualization for `watched this month` & `watched vs liked`
@@ -140,7 +139,13 @@ To contribute, see the setup instructions.
 * [Kate](https://github.com/Kate-v2)
 
 ## Technical
-
+* `Ruby '2.4.1'`
+* `Rails '~> 5.2.2'`
+* [PostgreSQL](https://www.postgresql.org/) for database
+* `'rspec-rails', '~> 3.8'` for testing
+* [Travis CI](https://travis-ci.org/)
+* [Heroku](https://www.heroku.com/)
+* See [Gemfile](https://github.com/Kate-v2/MovieMaze_API/blob/master/Gemfile) for specific gems
 
 ## [Turing](https://www.turing.io/) Project Details:
 * [Assignment](http://backend.turing.io/module4/projects/take_home_challenge/take_home_challenge_spec)
