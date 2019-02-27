@@ -5,10 +5,6 @@ class MovieSearchResult
     @data = data
   end
 
-  def id
-    0
-  end
-
   def picture
     @data[:picture]
   end
