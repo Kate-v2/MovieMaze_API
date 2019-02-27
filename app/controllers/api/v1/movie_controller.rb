@@ -7,6 +7,7 @@ class Api::V1::MovieController < ApplicationController
     render_movie
   end
 
+  private
 
   def render_movie
     response.status = 200

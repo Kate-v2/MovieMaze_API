@@ -25,7 +25,7 @@ class Movie
       :imdbRating,
       :Type
     )
-    data[:imdbRating] += "/10"
+    data[:imdbRating] += "/10" if data[:imdbRating]
     return data
   end
 
