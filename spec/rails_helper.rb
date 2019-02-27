@@ -53,8 +53,10 @@ Shoulda::Matchers.configure do |config|
 end
 
 require 'webmock/rspec'
-
 require 'capybara/rails'
+
+require './spec/fixtures/stub_utelly'
+
 
 RSpec.configure do |config|
 
@@ -72,4 +74,7 @@ RSpec.configure do |config|
   config.include Capybara::DSL
   Capybara.default_host = 'http://localhost:3000'
   config.include FactoryBot::Syntax::Methods
+
+  include StubUtelly
+
 end
