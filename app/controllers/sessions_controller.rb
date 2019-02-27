@@ -2,6 +2,8 @@
 
 class SessionsController < ApplicationController
 
+  skip_before_action :verify_authenticity_token
+
   def create
     input = parse_params
     @user = User.find_by_username(input[:username])
