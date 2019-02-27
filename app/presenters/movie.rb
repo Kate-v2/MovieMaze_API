@@ -10,7 +10,6 @@ class Movie
   end
 
   def details
-    puts get_data
     data = get_data.dup
     data.slice!(
       :Title,
@@ -27,8 +26,6 @@ class Movie
       :Type
     )
     data[:imdbRating] += "/10" if data[:imdbRating]
-    # binding.pry
-    puts data
     return data
   end
 
