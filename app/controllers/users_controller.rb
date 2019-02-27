@@ -2,6 +2,8 @@
 
 class UsersController < ApplicationController
 
+  skip_before_action :verify_authenticity_token
+
   def create
     input = parse_params
     response.status = 400 if User.find_by_username(input[:username])
