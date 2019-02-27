@@ -56,6 +56,7 @@ require 'webmock/rspec'
 require 'capybara/rails'
 
 require './spec/fixtures/stub_utelly'
+require './spec/fixtures/stub_omdb'
 
 
 RSpec.configure do |config|
@@ -76,5 +77,6 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
 
   include StubUtelly
+  include StubOMDb
 
 end
