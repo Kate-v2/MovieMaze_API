@@ -10,6 +10,7 @@ class Movie
   end
 
   def details
+    puts get_data
     data = get_data.dup
     data.slice!(
       :Title,

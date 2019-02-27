@@ -9,6 +9,8 @@ class OmdbService
   end
 
   def get_data
+    puts "query: " + format_query
+    puts "title: " + @title
     get_json( format_query )
   end
 
