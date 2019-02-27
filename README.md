@@ -162,6 +162,45 @@ Body:
 }
 ```
 
+* **Search Movie Details** GET https://movie-maze.herokuapp.com/api/v1/movie
+```
+Headers:
+  Content-type: application/json
+  Accept: application/json
+Body:
+{
+  "title": "bojack"
+}
+```
+```
+Response
+status: 200
+Body:
+{
+    "data": {
+        "id": "0",
+        "type": "movie",
+        "attributes": {
+            "id": 0,
+            "details": {
+                "Title": "BoJack Horseman",
+                "Year": "2014–",
+                "Rated": "TV-MA",
+                "Runtime": "25 min",
+                "Genre": "Animation, Comedy, Drama",
+                "Director": "N/A",
+                "Actors": "Will Arnett, Amy Sedaris, Alison Brie, Aaron Paul",
+                "Plot": "BoJack Horseman was the star of the hit TV show \"Horsin' Around\" in the '90s, now he's washed up, living in Hollywood, complaining about everything, and wearing colorful sweaters.",
+                "Awards": "Nominated for 1 Primetime Emmy. Another 7 wins & 20 nominations.",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BNzgzNzg3MDkyOF5BMl5BanBnXkFtZTgwOTk5MjAzNjM@._V1_SX300.jpg",
+                "imdbRating": "8.5/10",
+                "Type": "series"
+            }
+        }
+    }
+}
+```
+
 
 
 ## Known Issues
