@@ -26,6 +26,8 @@ class Movie
       :Type
     )
     data[:imdbRating] += "/10" if data[:imdbRating]
+    # binding.pry
+    puts data
     return data
   end
 
