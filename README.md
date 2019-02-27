@@ -47,6 +47,65 @@ This app obtains data through:
 ## How to Use
 1. Go to [MovieMaze]()
 
+* GET https://movie-maze.herokuapp.com/api/v1/search
+```
+Headers:
+  Content-type: application/json
+  Accept: application/json
+Body:
+{
+  "term": "bojack"
+}
+```
+```
+Response
+status: 200
+Body:
+{
+    "data": {
+        "id": "0",
+        "type": "movie_search_results",
+        "attributes": {
+            "id": 0,
+            "term": "bojack",
+            "results": [
+                {
+                    "title": "BoJack Horseman",
+                    "picture": "https://utellyassets2-9.imgix.net/2/Open/TMDB4_2462/Misc/5u3Y2HpD0wlK697lnpvNn6h5lYK.jpg?fit=crop&auto=compress&crop=faces,top",
+                    "streams": [
+                        {
+                            "service": "Netflix",
+                            "url": "https://www.netflix.com/title/70300800"
+                        }
+                    ]
+                },
+                {
+                    "title": "Dragon Ball Z: Bojack Unbound",
+                    "picture": "https://utellyassets2-9.imgix.net/2/Open/MovieDB_2462/Program/19828569/_9by13/19828569_PA_DragonBallZBojackUnbound.jpg?fit=crop&auto=compress&crop=faces,top",
+                    "streams": [
+                        {
+                            "service": "iTunes",
+                            "url": "https://itunes.apple.com/us/movie/dragon-ball-z-bojack-unbound/id1371978171?uo=5&at=1l3v7yf"
+                        }
+                    ]
+                },
+                {
+                    "title": "BoJack Horseman Christmas Special: Sabrina's Christmas Wish",
+                    "picture": null,
+                    "streams": [
+                        {
+                            "service": "Netflix",
+                            "url": "https://www.netflix.com/title/80019503"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
+```
+
+
 
 ## Known Issues
 
